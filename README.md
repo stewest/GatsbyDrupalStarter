@@ -106,6 +106,8 @@ cd drupal
 docker-compose up -d
 # ssh into the container
 docker-compose exec cli bash
+# Run composer install
+composer install --prefer-dist --no-dev
 # This will destroy the database and import the data.
 # If you wish to keep you existing data add the --no-wipe flag.
 drush sqlc < ~/path/to/data/homepage-starter-dump.sql
