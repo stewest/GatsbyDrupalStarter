@@ -13,7 +13,7 @@
 
 Create a homepage using Gatsby and Drupal. This starter demonstrates how to use Drupal to build a homepage and can be customized to match your own visual branding.
 
-[View the live Demo](https://gatsbydrupalhomepage.gatsbyjs.io/)
+[View the live Demo of the original Author](https://gatsbydrupalhomepage.gatsbyjs.io/)
 
 This is forked from https://github.com/gatsbyjs/gatsby-starter-drupal-homepage so see this for more.
 
@@ -42,7 +42,17 @@ You will need a new or existing `Drupal` website to use this starter and will be
 
 1. **Import content to your Drupal instance**
 
-   For this implementation we used **DOCKER** as our local host. So some configurations may be specific to that platform. Before importing the sql dump file we recommend extracting and adding the files located in **`data/files.zip`** to your drupal site under **`sites/default/`** or wherever your files folder is located on your instance. Afterwards you may use the **sql** dump file provided in the same **data** directory called **`homepage-starter-dump.sql.gz`**. Depending on the setup, you may have to extract the sql file before trying to import the data.
+   For this implementation we used **DOCKER** as our local host. So some configurations may be specific to that platform. Before importing the sql dump file we recommend extracting and adding the files located in **`data/files.zip`** extracted to "files_dev", to your drupal site under **`sites/default/files`** or wherever your files folder is located on your instance. Afterwards you may use the **sql** dump file provided in the same **data** directory called **`homepage-starter-dump.sql.gz`**. Depending on the setup, you may have to extract the sql file to your drupal folder before trying to import the data.
+
+   An **admin** user already exists in the application. You will have to reset the password if you decide to start from a clean site.
+
+```sh
+# Drush 9
+drush user:password admin "admin"
+
+# Drush 8 & earlier
+drush user-password admin --password="admin"
+```
 
 All the modules should now be installed and activated. To ensure that they are all installed correctly:
 
@@ -77,14 +87,21 @@ After setting up the Drupal site, navigate back to your Gatsby site's root direc
 
 ```sh
 yarn setup
+
+# In this example case the password and URL would be...
+1. DRUPAL_BASE_URL=
+```
+http://nginx-drupal.docker.amazee.io/
+```
+2. DRUPAL_BASIC_AUTH_USERNAME="admin"
+3. DRUPAL_BASIC_AUTH_PASSWORD="admin"
 ```
 
 This will run a script to create `.env.development` and `.env.production` files for you populated with your Drupal site environment variables.
 
 ---
 
-## Local Drupal Development
-### DOCKER (Locally)
+## DOCKER (Locally)
 This demo uses Pygmy and Docker:
 See https://github.com/pygmystack/pygmy
 
@@ -97,9 +114,11 @@ See https://github.com/pygmystack/pygmy
 brew tap pygmystack/pygmy && brew install pygmy
 # Once installed run
 pygmy up
+# If it errors, run `pygmy up` again
 ```
 The required dockerfiles are provided.
 
+## In Docker Dashboard Settings, make sure "Use Docker Composer version 2" is Not Enabled!
 ```sh
 cd drupal
 # Start Docker (this will build the containers if you haven't yet)
@@ -110,41 +129,19 @@ docker-compose exec cli bash
 composer install --prefer-dist --no-dev
 # This will destroy the database and import the data.
 # If you wish to keep you existing data add the --no-wipe flag.
-drush sqlc < ~/path/to/data/homepage-starter-dump.sql
+cd web
+drush sqlc < ../homepage-starter-dump.sql (or the path of the extracted homepage-starter-dump.sql)
 ```
+
 The **composer.json** file as well as exported configurations found in the **config** folder are also included. If you decide to import and install these configurations, please do so before executing the **sql** script and be sure **not** to clean the existing database.
 
 ```sh
 # import configurations
-drush cim
-
-# initial install
-composer update
-
-# installing from composer.lock
-composer install
+drush cim #this should be the same
 ```
 
-### Drush inside the Docker container.
-
-For more information on how to use drush commands and how to install the command line shell visit [Drush Documentation Site](https://www.drush.org/latest/).
-
-```sh
-# If you wish to start from a clean site
-drush sql-drop
-drush sql-cli < ~/path/to/data/homepage-starter-dump.sql
-```
-
-An **admin** user already exists in the application. Password is the same as the username. You will have to reset the password if you decide to start from a clean site.
-
-```sh
-# Drush 9
-drush user:password admin "new_password"
-
-# Drush 8 & earlier
-drush user-password admin --password="new_password"
-```
-
+Visit your docker site:
+http://nginx-drupal.docker.amazee.io/
 
 ## Start developing
 1. **Start Gatsby**
