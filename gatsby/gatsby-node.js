@@ -110,6 +110,13 @@ exports.createSchemaCustomization = async ({ actions }) => {
       text: String
     }
 
+    interface HomepageBanner implements Node & HomepageBlock {
+      id: ID!
+      blocktype: String
+      heading: String
+      text: String
+    }
+
     interface HeaderNavItem implements Node {
       id: ID!
       navItemType: String
@@ -372,6 +379,13 @@ exports.createSchemaCustomization = async ({ actions }) => {
       id: ID!
       href: String @proxy(from: "field_href")
       text: String @proxy(from: "title")
+    }
+
+    type node__homepage_banner implements Node & HomepageBanner & HomepageBlock @dontInfer {
+      id: ID!
+      blocktype: String @blocktype
+      heading: String @proxy(from: "title")
+      text: String @proxy(from: "field_text")
     }
 
     type node__nav_item implements Node & NavItem & HeaderNavItem @dontInfer {
