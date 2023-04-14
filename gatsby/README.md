@@ -332,25 +332,25 @@ For this example, we'll create a new "Banner" component.
    ```js
    // in gatsby-node.js
    exports.createSchemaCustomization = async ({ actions }) => {
-     // ...
-     actions.createTypes(`
-       interface HomepageBanner implements Node & HomepageBlock {
-         id: ID!
-         blocktype: String
-         heading: String
-         text: String
-       }
-     `)
-     // ...
-     actions.createTypes(`
-       type node__homepage_banner implements Node & HomepageBanner & HomepageBlock @dontInfer {
-         id: ID!
-         blocktype: String @blocktype
-         heading: String
-         text: String
-       }
-     `)
-     // ...
+     // ... where the Interfaces are...
+      actions.createTypes(`
+         interface HomepageBanner implements Node & HomepageBlock {
+            id: ID!
+            blocktype: String
+            heading: String
+            text: String
+         }
+      `)
+      // ...  Later on... where the Types are..
+      actions.createTypes(`
+         type node__homepage_banner implements Node & HomepageBanner & HomepageBlock @dontInfer {
+            id: ID!
+            blocktype: String @blocktype
+            heading: String @proxy(from: "title")
+            text: String @proxy(from: "field_text")
+         }
+      `)
+      // ...
    }
    ```
 
