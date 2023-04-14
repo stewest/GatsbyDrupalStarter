@@ -333,6 +333,7 @@ For this example, we'll create a new "Banner" component.
    // in gatsby-node.js
    exports.createSchemaCustomization = async ({ actions }) => {
      // ... where the Interfaces are...
+     
       actions.createTypes(`
          interface HomepageBanner implements Node & HomepageBlock {
             id: ID!
@@ -341,7 +342,9 @@ For this example, we'll create a new "Banner" component.
             text: String
          }
       `)
+
       // ...  Later on... where the Types are..
+
       actions.createTypes(`
          type node__homepage_banner implements Node & HomepageBanner & HomepageBlock @dontInfer {
             id: ID!
@@ -350,6 +353,7 @@ For this example, we'll create a new "Banner" component.
             text: String @proxy(from: "field_text")
          }
       `)
+
       // ...
    }
    ```
@@ -394,9 +398,7 @@ For this example, we'll create a new "Banner" component.
    export { default as HomepageTestimonialList } from "./testimonial-list"
    export { default as HomepageStatList } from "./stat-list"
    export { default as HomepageCta } from "./cta"
-   export { default as HomepageProductList } from "./product-list"
-
-   // add export for new component
+   export { default as HomepageProductList } from "./product-list
    export { default as HomepageBanner } from "./banner"
    ```
 
@@ -425,8 +427,7 @@ For this example, we'll create a new "Banner" component.
            ...HomepageTestimonialListContent
            ...HomepageBenefitListContent
            ...HomepageStatListContent
-           ...HomepageProductListContent
-           # New component fragment
+           ...HomepageProductListConten
            ...HomepageBannerContent
          }
        }

@@ -1,10 +1,10 @@
 _core:
   default_config_hash: U05FQzBBZLLZtA9aGnomLlDDkszG50CKmrciFGUlXfM
-server_url: 'https://preview-gatsbydrupalhomepage.gtsb.io'
-preview_callback_url: 'https://webhook.gatsbyjs.com/hooks/data_source/34e5dccf-8a58-469d-8dae-c9678450fb68'
+server_url: 'https://preview-gatsbydrupalhomepage.gtsb.io1'
+preview_callback_url: '1https://webhook.gatsbyjs.com/hooks/data_source/34e5dccf-8a58-469d-8dae-c9678450fb68'
 path_mapping: ''
-incrementalbuild_url: 'https://webhook.gatsbyjs.com/hooks/data_source/publish/34e5dccf-8a58-469d-8dae-c9678450fb68'
-build_published: true
+incrementalbuild_url: '1https://webhook.gatsbyjs.com/hooks/data_source/publish/34e5dccf-8a58-469d-8dae-c9678450fb68'
+build_published: false
 preview_entity_types:
   - block_content
   - comment
