@@ -12,10 +12,10 @@ field_name: field_date
 entity_type: node
 bundle: blog_post
 label: Date
-description: ""
+description: ''
 required: true
 translatable: false
-default_value: {}
-default_value_callback: ""
-settings: {}
+default_value: {  }
+default_value_callback: ''
+settings: {  }
 field_type: datetime

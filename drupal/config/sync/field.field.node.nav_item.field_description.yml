@@ -10,10 +10,10 @@ field_name: field_description
 entity_type: node
 bundle: nav_item
 label: Description
-description: ""
+description: ''
 required: false
 translatable: true
-default_value: {}
-default_value_callback: ""
-settings: {}
+default_value: {  }
+default_value_callback: ''
+settings: {  }
 field_type: string_long

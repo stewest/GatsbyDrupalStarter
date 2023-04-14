@@ -10,10 +10,10 @@ field_name: field_name
 entity_type: node
 bundle: homepage_testimonial_list
 label: Name
-description: ""
+description: ''
 required: true
 translatable: true
-default_value: {}
-default_value_callback: ""
-settings: {}
+default_value: {  }
+default_value_callback: ''
+settings: {  }
 field_type: string

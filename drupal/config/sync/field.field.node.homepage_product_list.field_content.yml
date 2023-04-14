@@ -11,13 +11,13 @@ field_name: field_content
 entity_type: node
 bundle: homepage_product_list
 label: Content
-description: ""
+description: ''
 required: true
 translatable: true
-default_value: {}
-default_value_callback: ""
+default_value: {  }
+default_value_callback: ''
 settings:
-  handler: "default:node"
+  handler: 'default:node'
   handler_settings:
     target_bundles:
       homepage_product: homepage_product
@@ -25,5 +25,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ""
+    auto_create_bundle: ''
 field_type: entity_reference

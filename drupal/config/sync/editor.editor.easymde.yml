@@ -34,4 +34,4 @@ settings:
   editor:
     settings:
       show_icons: null
-image_upload: {}
+image_upload: {  }

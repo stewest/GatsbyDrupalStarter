@@ -10,10 +10,10 @@ field_name: field_username
 entity_type: node
 bundle: social_link
 label: Username
-description: ""
+description: ''
 required: true
 translatable: false
-default_value: {}
-default_value_callback: ""
-settings: {}
+default_value: {  }
+default_value_callback: ''
+settings: {  }
 field_type: string

@@ -10,14 +10,14 @@ id: node.nav_item_group.field_nav_items
 field_name: field_nav_items
 entity_type: node
 bundle: nav_item_group
-label: "Nav Items"
-description: ""
+label: 'Nav Items'
+description: ''
 required: false
 translatable: false
-default_value: {}
-default_value_callback: ""
+default_value: {  }
+default_value_callback: ''
 settings:
-  handler: "default:node"
+  handler: 'default:node'
   handler_settings:
     target_bundles:
       nav_item: nav_item

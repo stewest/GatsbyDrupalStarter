@@ -10,10 +10,10 @@ field_name: field_copyright
 entity_type: node
 bundle: layout_footer
 label: Copyright
-description: ""
+description: ''
 required: true
 translatable: false
-default_value: {}
-default_value_callback: ""
-settings: {}
+default_value: {  }
+default_value_callback: ''
+settings: {  }
 field_type: string

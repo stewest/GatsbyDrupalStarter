@@ -10,14 +10,14 @@ id: node.layout_footer.field_social_links
 field_name: field_social_links
 entity_type: node
 bundle: layout_footer
-label: "Social Links"
-description: ""
+label: 'Social Links'
+description: ''
 required: true
 translatable: false
-default_value: {}
-default_value_callback: ""
+default_value: {  }
+default_value_callback: ''
 settings:
-  handler: "default:node"
+  handler: 'default:node'
   handler_settings:
     target_bundles:
       social_link: social_link
@@ -25,5 +25,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ""
+    auto_create_bundle: ''
 field_type: entity_reference

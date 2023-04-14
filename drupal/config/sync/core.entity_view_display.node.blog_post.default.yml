@@ -20,24 +20,24 @@ content:
   field_body:
     type: text_default
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 104
     region: content
   field_date:
     type: datetime_default
     label: above
     settings:
-      timezone_override: ""
+      timezone_override: ''
       format_type: medium
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 102
     region: content
   field_rich_text:
     type: text_default
     label: above
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 103
     region: content
   field_slug:
@@ -45,12 +45,12 @@ content:
     label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 101
     region: content
   links:
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 100
     region: content
-hidden: {}
+hidden: {  }

@@ -9,14 +9,14 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-    parent: "main:"
+    parent: 'main:'
   gatsby:
     preview: false
     target: window
-name: "Homepage Link Group"
+name: 'Homepage Link Group'
 type: homepage_link_group
-description: ""
-help: ""
+description: ''
+help: ''
 new_revision: false
 preview_mode: 1
 display_submitted: false

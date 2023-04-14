@@ -8,11 +8,11 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-    parent: "main:"
-name: "Layout Footer"
+    parent: 'main:'
+name: 'Layout Footer'
 type: layout_footer
-description: ""
-help: ""
+description: ''
+help: ''
 new_revision: false
 preview_mode: 1
 display_submitted: false

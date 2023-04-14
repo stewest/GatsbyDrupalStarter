@@ -12,10 +12,10 @@ field_name: field_body
 entity_type: node
 bundle: page
 label: Body
-description: ""
+description: ''
 required: true
 translatable: false
-default_value: {}
-default_value_callback: ""
-settings: {}
+default_value: {  }
+default_value_callback: ''
+settings: {  }
 field_type: text_long

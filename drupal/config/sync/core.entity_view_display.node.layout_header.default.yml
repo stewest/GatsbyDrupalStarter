@@ -18,7 +18,7 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 102
     region: content
   field_nav_items:
@@ -26,12 +26,12 @@ content:
     label: above
     settings:
       link: true
-    third_party_settings: {}
+    third_party_settings: {  }
     weight: 103
     region: content
   links:
-    settings: {}
-    third_party_settings: {}
+    settings: {  }
+    third_party_settings: {  }
     weight: 100
     region: content
-hidden: {}
+hidden: {  }

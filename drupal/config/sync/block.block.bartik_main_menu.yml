@@ -15,13 +15,13 @@ theme: bartik
 region: primary_menu
 weight: 0
 provider: null
-plugin: "system_menu_block:main"
+plugin: 'system_menu_block:main'
 settings:
-  id: "system_menu_block:main"
-  label: "Main navigation"
-  label_display: "0"
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
   provider: system
   level: 1
   depth: 1
   expand_all_items: false
-visibility: {}
+visibility: {  }

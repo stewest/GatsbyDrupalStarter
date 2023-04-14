@@ -10,10 +10,10 @@ field_name: field_kicker
 entity_type: node
 bundle: about_leadership
 label: Kicker
-description: ""
+description: ''
 required: true
 translatable: true
-default_value: {}
-default_value_callback: ""
-settings: {}
+default_value: {  }
+default_value_callback: ''
+settings: {  }
 field_type: string

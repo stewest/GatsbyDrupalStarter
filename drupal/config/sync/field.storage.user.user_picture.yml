@@ -19,8 +19,8 @@ settings:
   uri_scheme: public
   default_image:
     uuid: null
-    alt: ""
-    title: ""
+    alt: ''
+    title: ''
     width: null
     height: null
 module: image

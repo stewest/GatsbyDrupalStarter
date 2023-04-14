@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.homepage
+    - node.type.homepage_banner
     - node.type.homepage_benefit_list
     - node.type.homepage_cta
     - node.type.homepage_feature_list
@@ -18,15 +19,16 @@ field_name: field_content
 entity_type: node
 bundle: homepage
 label: Content
-description: ""
+description: ''
 required: true
 translatable: true
-default_value: {}
-default_value_callback: ""
+default_value: {  }
+default_value_callback: ''
 settings:
-  handler: "default:node"
+  handler: 'default:node'
   handler_settings:
     target_bundles:
+      homepage_banner: homepage_banner
       homepage_benefit_list: homepage_benefit_list
       homepage_cta: homepage_cta
       homepage_feature_list: homepage_feature_list

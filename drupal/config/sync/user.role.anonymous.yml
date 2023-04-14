@@ -14,13 +14,13 @@ dependencies:
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
-label: "Anonymous user"
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - "access comments"
-  - "access content"
-  - "access site-wide contact form"
-  - "search content"
-  - "use text format restricted_html"
-  - "view media"
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'

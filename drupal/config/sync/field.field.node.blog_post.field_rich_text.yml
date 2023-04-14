@@ -11,11 +11,11 @@ id: node.blog_post.field_rich_text
 field_name: field_rich_text
 entity_type: node
 bundle: blog_post
-label: "Rich Text"
-description: ""
+label: 'Rich Text'
+description: ''
 required: true
 translatable: false
-default_value: {}
-default_value_callback: ""
-settings: {}
+default_value: {  }
+default_value_callback: ''
+settings: {  }
 field_type: text_long
