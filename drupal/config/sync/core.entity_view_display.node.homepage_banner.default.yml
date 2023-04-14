@@ -1,0 +1,27 @@
+uuid: 28888b19-a8cb-44c0-81e2-cfe2aed28496
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_banner.field_text
+    - node.type.homepage_banner
+  module:
+    - user
+id: node.homepage_banner.default
+targetEntityType: node
+bundle: homepage_banner
+mode: default
+content:
+  field_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

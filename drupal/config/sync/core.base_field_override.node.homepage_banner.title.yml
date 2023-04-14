@@ -1,0 +1,18 @@
+uuid: 404191b2-f610-4b3a-ba32-d65401bee394
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homepage_banner
+id: node.homepage_banner.title
+field_name: title
+entity_type: node
+bundle: homepage_banner
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
