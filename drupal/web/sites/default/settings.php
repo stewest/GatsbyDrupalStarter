@@ -761,8 +761,6 @@ $settings["config_sync_directory"] = '../config/sync';
 
 $settings['rebuild_access'] = TRUE;
 
-$settings['skip_permissions_hardening'] = TRUE;
-
 // Last: this servers specific settings files.
 if (file_exists(__DIR__ . '/settings.local.php')) {
   include __DIR__ . '/settings.local.php';
